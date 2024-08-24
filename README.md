@@ -24,31 +24,20 @@ This API was developed to demonstrate the creation of a serverless API using AWS
    git clone https://github.com/SeuUsuario/aws-lambda-api.git
    cd aws-lambda-api
 
-Instale as dependências:
+## Endpoints
 
-bash
-Copiar código
-pip install -r requirements.txt
-Deploy na AWS:
+- **GET /dev/**: Returns a welcome message.
+- **POST /dev/data**: Receives data and processes it.
 
-Faça o deploy da função Lambda e configure o API Gateway conforme as instruções no console da AWS.
-Endpoints
-GET /dev/: Retorna uma mensagem de boas-vindas.
-POST /dev/data: Recebe dados e os processa.
-Próximos Passos
-Adicionar autenticação com AWS Cognito.
-Implementar persistência de dados com DynamoDB.
-Contribuições
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+  ## Next Steps
 
-Licença
-Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para obter mais informações.
+- Add authentication with AWS Cognito.
+- Implement data persistence with DynamoDB.
 
-markdown
-Copiar código
+  ## Contributions
 
-**Nota:** Substitua `"SeuUsuario"` pelo seu nome de usuário no GitHub.
+Contributions are welcome! Feel free to open issues or pull requests.
 
-Salvar o Arquivo README.md:
+## License
 
-Salve o arquivo depois de adicionar ou editar o conteúdo.
+This project is under the MIT license. See the LICENSE file for more information.
