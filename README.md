@@ -1,80 +1,86 @@
-
-
 # AWS Lambda API
 
-This project is a serverless API created using AWS Lambda and API Gateway.
+A serverless API created using AWS Lambda and API Gateway.
 
 ## Description
 
-This project is a serverless API created using AWS Lambda and API Gateway. The API is capable of processing HTTP requests, demonstrating how to build and deploy a cloud service without the need to manage servers. This project is ideal for developers who want to learn about serverless computing and using AWS services to create scalable, low-cost APIs.
+This project is a serverless API built with AWS Lambda and API Gateway. The API is publicly available at [this link](https://0jb6p52778.execute-api.eu-north-1.amazonaws.com/dev). It demonstrates how to create and deploy a cloud-based service without the need to manage servers. This project is ideal for developers learning about serverless computing and how to use AWS services to create scalable, low-cost APIs.
 
-## Usage Examples
+**Main Features:**
 
-### 1. GET Request
-
-To make a `GET` request and receive a welcome message:
-
-```bash
-curl -X GET https://0jb6p52778.execute-api.eu-north-1.amazonaws.com/dev/
-
-## 2. POST Request
-To make a POST request and send data to the API:
-curl -X POST https://0jb6p52778.execute-api.eu-north-1.amazonaws.com/dev/data -H "Content-Type: application/json" -d '{"key1": "value1", "key2": "value2"}'
-
-Expected Response:
-{
-  "status": "success",
-  "message": "Dados recebidos com sucesso!"
-}
-
-## **3. Add a Known Issues Section**
-
-Here is a suggestion for the **Known Issues** section:
-
-```markdown
-## Known Issues
-
-- **CORS Limitations**: The API is currently not configured to handle all CORS scenarios, which may cause issues when trying to access the API directly from some browsers.
-- **Data Validation**: There is no robust data validation implemented in the `POST` endpoint. Data sent without the correct format may cause errors.   
+- Processes HTTP requests.
+- Easy integration with AWS services.
+- Example of a serverless architecture.
 
 ## Technologies Used
 
-- **AWS Lambda**: For serverless computing.
-- **AWS API Gateway**: For managing RESTful endpoints.
-- **Python**: Programming language used for the Lambda function.
-- **AWS IAM**: For permissions and security management.
+- **AWS Lambda**: Serverless computing service that runs your code in response to events and automatically manages the underlying compute resources.
+- **API Gateway**: Service for creating, publishing, maintaining, monitoring, and securing RESTful APIs at any scale.
 
-## How to Execute
+## How to Run
 
-1. **Clone the repository**:
-
+1. Clone the repository to your local environment:
    ```bash
-   git clone https://github.com/SeuUsuario/aws-lambda-api.git
-   cd aws-lambda-api
+   git clone https://github.com/GustavoLVJardim/aws-lambda-api.git
+Install the necessary dependencies:
+bash
 
-## Endpoints
+pip install -r requirements.txt
+Deploy the Lambda function and configure API Gateway:
+Log in to the AWS Console.
+Navigate to the Lambda service and create a new function.
+Deploy the Lambda function using the provided code.
+Configure API Gateway to integrate with your Lambda function.
+Endpoints
+GET /dev/: Returns a welcome message.
 
-- **GET /dev/**: Returns a welcome message.
-- **POST /dev/data**: Receives data and processes it.
+URL: GET https://0jb6p52778.execute-api.eu-north-1.amazonaws.com/dev/
+POST /dev/data: Receives data and processes it.
 
-  ## Next Steps
+URL: POST https://0jb6p52778.execute-api.eu-north-1.amazonaws.com/dev/data
+Usage Examples
+1. GET Request
+To make a GET request and receive a welcome message:
 
-- Add authentication with AWS Cognito.
-- Implement data persistence with DynamoDB.
+bash
 
-  ## Contributions
+curl -X GET https://0jb6p52778.execute-api.eu-north-1.amazonaws.com/dev/
+Expected Response:
+json
 
+{
+  "message": "Welcome to the serverless API!"
+}
+2. POST Request
+To make a POST request and send data to the API:
+
+bash
+
+curl -X POST https://0jb6p52778.execute-api.eu-north-1.amazonaws.com/dev/data -H "Content-Type: application/json" -d '{"key1": "value1", "key2": "value2"}'
+Expected Response:
+json
+
+{
+  "status": "success",
+  "message": "Data received successfully!"
+}
+Known Issues
+CORS Limitations: The API may have CORS issues when called from certain domains. This requires additional configuration in API Gateway.
+Data Validation: There is no robust data validation on the POST endpoint. Incorrect data can cause errors.
+Next Steps
+Implement authentication with AWS Cognito to enhance API security.
+Add data persistence using DynamoDB to store and retrieve data.
+Improve error handling and add standardized responses.
+Contributions
 Contributions are welcome! To contribute to this project:
 
-1. **Fork the repository** to your own GitHub.
-2. **Clone** the forked repository to your local environment.
-3. Create a new **branch** for your modifications: `git checkout -b feature/name-of-your-branch`.
-4. **Commit** your changes: `git commit -m 'Add new functionality'`.
-5. **push** to the branch: `git push origin feature/name-of-your-branch`.
-6. **Open a Pull Request** on the original repository.
-
+Fork the repository to your own GitHub.
+Clone the forked repository to your local environment.
+Create a new branch for your changes: git checkout -b feature/your-branch-name.
+Commit your changes: git commit -m 'Add new feature'.
+Push to the branch: git push origin feature/your-branch-name.
+Open a Pull Request in the original repository.
 Feel free to open issues if you find bugs or have suggestions for improvements!
 
-## License
-
-This project is under the MIT license. See the LICENSE file for more information.
+License
+This project is licensed under the MIT License. See the LICENSE file for more information.
