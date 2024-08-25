@@ -17,7 +17,7 @@ To make a `GET` request and receive a welcome message:
 ```bash
 curl -X GET https://0jb6p52778.execute-api.eu-north-1.amazonaws.com/dev/
 
-### 2. POST Request
+## 2. POST Request
 To make a POST request and send data to the API:
 curl -X POST https://0jb6p52778.execute-api.eu-north-1.amazonaws.com/dev/data -H "Content-Type: application/json" -d '{"key1": "value1", "key2": "value2"}'
 
@@ -27,7 +27,7 @@ Expected Response:
   "message": "Dados recebidos com sucesso!"
 }
 
-### **3. Add a Known Issues Section**
+## **3. Add a Known Issues Section**
 
 Here is a suggestion for the **Known Issues** section:
 
